@@ -10,8 +10,8 @@ using eShopsolution.Data.EF;
 namespace eShopSolution.Data.Migrations
 {
     [DbContext(typeof(EShopDbContext))]
-    [Migration("20210929135316_Initial")]
-    partial class Initial
+    [Migration("20211001172803_Inital")]
+    partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
