@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace eShopSolution.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class SeedData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -309,7 +309,7 @@ namespace eShopSolution.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "DateCreated", "OriginalPrice", "Price", "SeoAlias" },
-                values: new object[] { 1, new DateTime(2021, 9, 30, 0, 34, 38, 352, DateTimeKind.Local).AddTicks(3195), 100000m, 200000m, null });
+                values: new object[] { 1, new DateTime(2021, 10, 4, 21, 17, 19, 258, DateTimeKind.Local).AddTicks(4935), 100000m, 200000m, null });
 
             migrationBuilder.InsertData(
                 table: "CategoryTranslations",

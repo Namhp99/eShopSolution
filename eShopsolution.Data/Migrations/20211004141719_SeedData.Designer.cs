@@ -10,8 +10,8 @@ using eShopsolution.Data.EF;
 namespace eShopSolution.Data.Migrations
 {
     [DbContext(typeof(EShopDbContext))]
-    [Migration("20210929173439_Initial")]
-    partial class Initial
+    [Migration("20211004141719_SeedData")]
+    partial class SeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -373,7 +373,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 9, 30, 0, 34, 38, 352, DateTimeKind.Local).AddTicks(3195),
+                            DateCreated = new DateTime(2021, 10, 4, 21, 17, 19, 258, DateTimeKind.Local).AddTicks(4935),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
