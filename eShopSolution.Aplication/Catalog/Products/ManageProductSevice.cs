@@ -3,7 +3,6 @@ using eShopsolution.Data.Entities;
 using eShopSolution.Data.Entities;
 using eShopSolution.Utilities.Exceptions;
 using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Catalog.Products.Manage;
 using eShopSolution.ViewModels.Common;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -104,7 +103,7 @@ namespace eShopSolution.Aplication.Catalog.Products
         }
 
 
-        public async Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
+        public async Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request)
         {
             //1/Select join
             var query = from p in _context.Products
@@ -116,9 +115,9 @@ namespace eShopSolution.Aplication.Catalog.Products
             //2.filter
             if (!string.IsNullOrEmpty(request.Keyword))
                 query = query.Where(x => x.pt.Name.Contains(request.Keyword));
-            if(request.CategoryIDs.Count > 0 )
+            if(request.CategoryIds.Count > 0 )
             {
-                query = query.Where(p => request.CategoryIDs.Contains(p.pic.CategoryId));
+                query = query.Where(p => request.CategoryIds.Contains(p.pic.CategoryId));
             }
             //3.Paging
             int tatalRow = await query.CountAsync();
